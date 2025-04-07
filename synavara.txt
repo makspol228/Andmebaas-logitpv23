@@ -4,3 +4,16 @@ haldus - администрирование
 andmebaaside haldussüsteemid -системы администрирования базы данных(проги)
 my sql server, oracle, mariaDB/phpmyadmin, access
 
+..........................................................................
+tabel таблица
+rida строка
+veerg столбик
+rida=kirjed записи
+veerg=väli поля
+päring запрос query
+käivita päring запустить запрос execute query
+värskenda / uuenda обновить
+kustuta стереть
+loo создать
+
+............................................................................
