@@ -1,1 +1,6 @@
+andmed ja informatsioon
+andmed - see on töödedldud info
+haldus - администрирование 
+andmebaaside haldussüsteemid -системы администрирования базы данных(проги)
+my sql server, oracle, mariaDB/phpmyadmin, access
 
