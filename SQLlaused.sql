@@ -25,3 +25,21 @@ SELECT * FROM inimene;
 
 --tabeli kustutamine
 DROP table inimene;
+
+--andmete lisamine
+--ddl - data definition language
+--dml - data manipulation language
+
+INSERT INTO inimene
+(nimi, synniaeg, telefon, pikkus, opilaskodu)
+VALUES
+('amx', '2007-12-30', '09876543', 190.75, 0),
+('gosha', '1999-12-30', '1234577', 170.65, 0),
+('valera', '2009-12-30', '35487634', 555.55, 0),
+('peter', '2000-12-30', '0284645', 123.33, 0)
+
+
+SELECT * FROM inimene;
+
+DELETE FROM inimene
+WHERE inimeneID=2;
