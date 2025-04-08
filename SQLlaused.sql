@@ -43,3 +43,64 @@ SELECT * FROM inimene;
 
 DELETE FROM inimene
 WHERE inimeneID=2;
+
+create table elukoht(
+elukohtID int primary key identity(1,1),
+elukoht varchar(50) unique,
+maakond varchar(50)
+);
+
+select * from elukoht;
+SELECT * FROM inimene;
+
+insert into elukoht(elukoht, maakond)
+values ('tartu', 'tartumaa'),
+('parnu', 'parnumaa');
+
+
+alter table inimene add elukohtID int;
+alter table inimene 
+add constraint fk_elukoht
+foreign key (elukohtID) 
+references elukoht(elukohtID);
+
+INSERT INTO inimene
+(nimi, synniaeg, telefon, pikkus, opilaskodu, elukohtID)
+VALUES ('ssl', '2001-12-30', '091236543', 10.00, 0, 1)
+
+select i.nimi, i.synniaeg, e.elukoht
+from inimene i join elukoht e
+on i.elukohtID=e.elukohtID;
+
+
+
+
+
+
+create table auto(
+autoID int primary key identity(1,1),
+autonr varchar(7) unique,
+mudell varchar(50),
+mark varchar(50),
+vaast char(10)
+);
+
+alter table inimene add autoID int;
+alter table inimene 
+add constraint fk_auto
+foreign key (autoID) 
+references auto(autoID);
+
+select * from auto;
+
+INSERT INTO auto
+(autonr, mudell, mark, vaast)
+VALUES ('aaa111', 'corolla', 'toyota', '2008-1-1')
+
+INSERT INTO inimene
+(nimi, synniaeg, telefon, pikkus, opilaskodu, elukohtID, autoID)
+VALUES ('ssl', '2001-12-30', '091236543', 10.00, 0, 1, 1)
+
+select i.nimi, a.vaast, a.mark, a.mudell
+from inimene i join auto a
+on i.elukohtID=a.autoID;
